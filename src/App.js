@@ -8,6 +8,7 @@ import GameOver from "./components/GameOver";
 export const AppContext = createContext();
 
 function App() {
+  const [correctWord, setCorrectWord] = useState("");
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
   const [wordSet, setWordSet] = useState(new Set());
@@ -16,12 +17,12 @@ function App() {
     gameOver: false,
     guessedWord: false,
   });
-
-  const correctWord = "RIGHT";
+  console.log(correctWord);
 
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
+      setCorrectWord(words.todaysWord);
     });
   }, []);
 
