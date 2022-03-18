@@ -14,7 +14,7 @@ function App() {
   const [disabledLetters, setDisabledLetters] = useState([]);
   const [gameOver, setGameOver] = useState({
     gameOver: false,
-    guessWord: false,
+    guessedWord: false,
   });
 
   const correctWord = "RIGHT";
