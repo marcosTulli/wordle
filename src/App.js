@@ -56,8 +56,8 @@ function App() {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
-    if (currAttempt.attempt === 6) {
-      setGameOver({ gameOver: true, guessWord: false });
+    if (currAttempt.attempt === 5) {
+      setGameOver({ gameOver: true, guessedWord: false });
     }
   };
 
