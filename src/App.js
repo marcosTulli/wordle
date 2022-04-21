@@ -9,7 +9,7 @@ export const AppContext = createContext();
 
 function App() {
   const [correctWord, setCorrectWord] = useState("");
-  const [board, setBoard] = useState(boardDefault);
+  const [mati ,setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
   const [wordSet, setWordSet] = useState(new Set());
   const [disabledLetters, setDisabledLetters] = useState([]);
